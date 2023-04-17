@@ -85,7 +85,7 @@ main p {
     height: 11px;
 }
 
-.form {
+form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -93,13 +93,14 @@ main p {
     width: 100%;
 }
 
-input {
+#email {
     width: 295px;
     background-color: #2C344B;
     border-radius: 28px; 
     height: 48px;
     border: 0px;
-    padding-left: 32px;
+    padding: 0px;
+    padding-left: 7%;
     font-family: 'Chivo', sans-serif ;
     font-style: normal;
     font-weight: 400;
@@ -110,7 +111,7 @@ input {
     opacity: 0.5;
 }
 
-button {
+#submit {
     width: 326px;
     height: 48px;
     border-radius: 28px;
@@ -124,8 +125,26 @@ button {
     font-size: 14px;
     line-height: 28px;
     color: #121725;
-    margin-top: 16px;
+    margin-top: 8px;
     padding: 0px;
+}
+
+#submit:hover {
+    background: #B3FFE2;
+    cursor: pointer;
+}
+
+#error-text {
+    font-family: 'Chivo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #FB3E3E;
+    align-self: start;
+    margin-left: 32px;
+    margin-top: 8px;
+    display: none;
 }
 
 .dots {
@@ -190,29 +209,46 @@ button {
         margin-top: 31px;
     }
 
+    .input {
+        width: 427px;
+    }
+
     .companies-form {
         display: flex;
         flex-direction: column-reverse;
     }
 
-    .form {
+    form {
         align-items: unset;
-        flex-direction: row;
+        flex-direction: column;
         position: relative;
-        align-items: center;
         margin-top: 40px;
+        width: 67%;
+        max-width: 558px;
     }
 
-    .form button {
+    form #submit {
         margin: 0px;
         height: 46px;
         width: 162px;
-        transform: translateX(-166px);
+        position: absolute;
+        right: -6%;
+        top: 5px;
     }
 
-    .form input {
+    #error-text {
+        color: red;
+        font-family: 'Chivo';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+    }
+    
+    form #email {
         height: 56px;
-        width: 427px;
+        width: 100%;
+        background-color: #2C344B;
     }
 
     .companies {
